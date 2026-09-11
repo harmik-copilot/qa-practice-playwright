@@ -54,5 +54,5 @@ test('filters to active todos and hides completed items', async ({ page }) => {
 
   await expect(page.getByTestId('todo-item')).toHaveCount(1);
   await expect(writeReportItem).toHaveCount(1);
-  await expect(buyMilkItem).toHaveCount(1);
+  await expect(buyMilkItem).toHaveCount(0);
 });
