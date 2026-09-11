@@ -39,8 +39,20 @@ test('deletes a todo item', async ({ page }) => {
   await expect(page.getByTestId('todo-item')).toHaveCount(0);
 });
 
-// TRY THIS WITH COPILOT:
-// Open Copilot Chat and ask it to add a test here for:
-// "Adding multiple todos, completing one, then filtering to show
-// only 'Active' items — verify the completed item is hidden."
-// Review the locator choices it picks before accepting.
+test('filters to active todos and hides completed items', async ({ page }) => {
+  const input = page.getByPlaceholder('What needs to be done?');
+  await input.fill('Buy milk');
+  await input.press('Enter');
+  await input.fill('Write test report');
+  await input.press('Enter');
+
+  const buyMilkItem = page.getByTestId('todo-item').filter({ hasText: 'Buy milk' });
+  const writeReportItem = page.getByTestId('todo-item').filter({ hasText: 'Write test report' });
+
+  await buyMilkItem.getByRole('checkbox').check();
+  await page.getByRole('link', { name: 'Active' }).click();
+
+  await expect(page.getByTestId('todo-item')).toHaveCount(1);
+  await expect(writeReportItem).toHaveCount(1);
+  await expect(buyMilkItem).toHaveCount(0);
+});
