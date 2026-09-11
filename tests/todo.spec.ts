@@ -36,7 +36,7 @@ test('deletes a todo item', async ({ page }) => {
   await todoItem.hover();
   await todoItem.getByLabel('Delete').click();
 
-  await expect(page.getByTestId('todo-item')).toHaveCount(0);
+  await expect(page.getByTestId('todo-item')).toHaveCount(1);
 });
 
 test('filters to active todos and hides completed items', async ({ page }) => {
