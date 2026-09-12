@@ -1,10 +1,25 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="5.277913">
-<testsuite name="todo.spec.ts" timestamp="2026-09-11T07:37:30.574Z" hostname="chromium" tests="3" failures="0" skipped="0" time="10.39" errors="0">
-<testcase name="adds a new todo item" classname="todo.spec.ts" time="3.301">
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="2.765679">
+<testsuite name="todo.spec.ts" timestamp="2026-09-12T13:08:26.234Z" hostname="chromium" tests="3" failures="0" skipped="0" time="5.511" errors="0">
+<testcase name="adds a new todo item" classname="todo.spec.ts" time="1.777">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/todo-adds-a-new-todo-item-chromium/trace.zip]]
+]]>
+</system-out>
 </testcase>
-<testcase name="marks a todo item as completed" classname="todo.spec.ts" time="3.563">
+<testcase name="marks a todo item as completed" classname="todo.spec.ts" time="1.858">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/todo-marks-a-todo-item-as-completed-chromium/trace.zip]]
+]]>
+</system-out>
 </testcase>
-<testcase name="deletes a todo item" classname="todo.spec.ts" time="3.526">
+<testcase name="deletes a todo item" classname="todo.spec.ts" time="1.876">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/todo-deletes-a-todo-item-chromium/trace.zip]]
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>
